@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF41753A270CA48A006FBA27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF417539270CA48A006FBA27 /* AppDelegate.swift */; };
+		FF41753C270CA48A006FBA27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41753B270CA48A006FBA27 /* SceneDelegate.swift */; };
+		FF41753E270CA48A006FBA27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41753D270CA48A006FBA27 /* ViewController.swift */; };
+		FF417541270CA48A006FBA27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF41753F270CA48A006FBA27 /* Main.storyboard */; };
+		FF417544270CA48A006FBA27 /* WheatherAppIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF417542270CA48A006FBA27 /* WheatherAppIOS.xcdatamodeld */; };
+		FF417546270CA48E006FBA27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF417545270CA48E006FBA27 /* Assets.xcassets */; };
+		FF417549270CA48E006FBA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF417547270CA48E006FBA27 /* LaunchScreen.storyboard */; };
+		FF417554270CA48F006FBA27 /* WheatherAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF417553270CA48F006FBA27 /* WheatherAppIOSTests.swift */; };
+		FF41755F270CA48F006FBA27 /* WheatherAppIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41755E270CA48F006FBA27 /* WheatherAppIOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF417550270CA48F006FBA27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF41752E270CA48A006FBA27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF417535270CA48A006FBA27;
+			remoteInfo = WheatherAppIOS;
+		};
+		FF41755B270CA48F006FBA27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF41752E270CA48A006FBA27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF417535270CA48A006FBA27;
+			remoteInfo = WheatherAppIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF417536270CA48A006FBA27 /* WheatherAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheatherAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF417539270CA48A006FBA27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF41753B270CA48A006FBA27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FF41753D270CA48A006FBA27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF417540270CA48A006FBA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF417543270CA48A006FBA27 /* WheatherAppIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WheatherAppIOS.xcdatamodel; sourceTree = "<group>"; };
+		FF417545270CA48E006FBA27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF417548270CA48E006FBA27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF41754A270CA48E006FBA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF41754F270CA48F006FBA27 /* WheatherAppIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheatherAppIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF417553270CA48F006FBA27 /* WheatherAppIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherAppIOSTests.swift; sourceTree = "<group>"; };
+		FF417555270CA48F006FBA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF41755A270CA48F006FBA27 /* WheatherAppIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheatherAppIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF41755E270CA48F006FBA27 /* WheatherAppIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherAppIOSUITests.swift; sourceTree = "<group>"; };
+		FF417560270CA48F006FBA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF417533270CA48A006FBA27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF41754C270CA48F006FBA27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF417557270CA48F006FBA27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF41752D270CA48A006FBA27 = {
+			isa = PBXGroup;
+			children = (
+				FF417538270CA48A006FBA27 /* WheatherAppIOS */,
+				FF417552270CA48F006FBA27 /* WheatherAppIOSTests */,
+				FF41755D270CA48F006FBA27 /* WheatherAppIOSUITests */,
+				FF417537270CA48A006FBA27 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF417537270CA48A006FBA27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF417536270CA48A006FBA27 /* WheatherAppIOS.app */,
+				FF41754F270CA48F006FBA27 /* WheatherAppIOSTests.xctest */,
+				FF41755A270CA48F006FBA27 /* WheatherAppIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF417538270CA48A006FBA27 /* WheatherAppIOS */ = {
+			isa = PBXGroup;
+			children = (
+				FF417539270CA48A006FBA27 /* AppDelegate.swift */,
+				FF41753B270CA48A006FBA27 /* SceneDelegate.swift */,
+				FF41753D270CA48A006FBA27 /* ViewController.swift */,
+				FF41753F270CA48A006FBA27 /* Main.storyboard */,
+				FF417545270CA48E006FBA27 /* Assets.xcassets */,
+				FF417547270CA48E006FBA27 /* LaunchScreen.storyboard */,
+				FF41754A270CA48E006FBA27 /* Info.plist */,
+				FF417542270CA48A006FBA27 /* WheatherAppIOS.xcdatamodeld */,
+			);
+			path = WheatherAppIOS;
+			sourceTree = "<group>";
+		};
+		FF417552270CA48F006FBA27 /* WheatherAppIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF417553270CA48F006FBA27 /* WheatherAppIOSTests.swift */,
+				FF417555270CA48F006FBA27 /* Info.plist */,
+			);
+			path = WheatherAppIOSTests;
+			sourceTree = "<group>";
+		};
+		FF41755D270CA48F006FBA27 /* WheatherAppIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF41755E270CA48F006FBA27 /* WheatherAppIOSUITests.swift */,
+				FF417560270CA48F006FBA27 /* Info.plist */,
+			);
+			path = WheatherAppIOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF417535270CA48A006FBA27 /* WheatherAppIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF417563270CA48F006FBA27 /* Build configuration list for PBXNativeTarget "WheatherAppIOS" */;
+			buildPhases = (
+				FF417532270CA48A006FBA27 /* Sources */,
+				FF417533270CA48A006FBA27 /* Frameworks */,
+				FF417534270CA48A006FBA27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WheatherAppIOS;
+			productName = WheatherAppIOS;
+			productReference = FF417536270CA48A006FBA27 /* WheatherAppIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF41754E270CA48F006FBA27 /* WheatherAppIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF417566270CA48F006FBA27 /* Build configuration list for PBXNativeTarget "WheatherAppIOSTests" */;
+			buildPhases = (
+				FF41754B270CA48F006FBA27 /* Sources */,
+				FF41754C270CA48F006FBA27 /* Frameworks */,
+				FF41754D270CA48F006FBA27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF417551270CA48F006FBA27 /* PBXTargetDependency */,
+			);
+			name = WheatherAppIOSTests;
+			productName = WheatherAppIOSTests;
+			productReference = FF41754F270CA48F006FBA27 /* WheatherAppIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF417559270CA48F006FBA27 /* WheatherAppIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF417569270CA48F006FBA27 /* Build configuration list for PBXNativeTarget "WheatherAppIOSUITests" */;
+			buildPhases = (
+				FF417556270CA48F006FBA27 /* Sources */,
+				FF417557270CA48F006FBA27 /* Frameworks */,
+				FF417558270CA48F006FBA27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF41755C270CA48F006FBA27 /* PBXTargetDependency */,
+			);
+			name = WheatherAppIOSUITests;
+			productName = WheatherAppIOSUITests;
+			productReference = FF41755A270CA48F006FBA27 /* WheatherAppIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF41752E270CA48A006FBA27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					FF417535270CA48A006FBA27 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					FF41754E270CA48F006FBA27 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = FF417535270CA48A006FBA27;
+					};
+					FF417559270CA48F006FBA27 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = FF417535270CA48A006FBA27;
+					};
+				};
+			};
+			buildConfigurationList = FF417531270CA48A006FBA27 /* Build configuration list for PBXProject "WheatherAppIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF41752D270CA48A006FBA27;
+			productRefGroup = FF417537270CA48A006FBA27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF417535270CA48A006FBA27 /* WheatherAppIOS */,
+				FF41754E270CA48F006FBA27 /* WheatherAppIOSTests */,
+				FF417559270CA48F006FBA27 /* WheatherAppIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF417534270CA48A006FBA27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF417549270CA48E006FBA27 /* LaunchScreen.storyboard in Resources */,
+				FF417546270CA48E006FBA27 /* Assets.xcassets in Resources */,
+				FF417541270CA48A006FBA27 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF41754D270CA48F006FBA27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF417558270CA48F006FBA27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF417532270CA48A006FBA27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF41753E270CA48A006FBA27 /* ViewController.swift in Sources */,
+				FF41753A270CA48A006FBA27 /* AppDelegate.swift in Sources */,
+				FF41753C270CA48A006FBA27 /* SceneDelegate.swift in Sources */,
+				FF417544270CA48A006FBA27 /* WheatherAppIOS.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF41754B270CA48F006FBA27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF417554270CA48F006FBA27 /* WheatherAppIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF417556270CA48F006FBA27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF41755F270CA48F006FBA27 /* WheatherAppIOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF417551270CA48F006FBA27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF417535270CA48A006FBA27 /* WheatherAppIOS */;
+			targetProxy = FF417550270CA48F006FBA27 /* PBXContainerItemProxy */;
+		};
+		FF41755C270CA48F006FBA27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF417535270CA48A006FBA27 /* WheatherAppIOS */;
+			targetProxy = FF41755B270CA48F006FBA27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF41753F270CA48A006FBA27 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF417540270CA48A006FBA27 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF417547270CA48E006FBA27 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF417548270CA48E006FBA27 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF417561270CA48F006FBA27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF417562270CA48F006FBA27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF417564270CA48F006FBA27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT46X4SNBR;
+				INFOPLIST_FILE = WheatherAppIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RustamKeneev.WheatherAppIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF417565270CA48F006FBA27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT46X4SNBR;
+				INFOPLIST_FILE = WheatherAppIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RustamKeneev.WheatherAppIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FF417567270CA48F006FBA27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT46X4SNBR;
+				INFOPLIST_FILE = WheatherAppIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RustamKeneev.WheatherAppIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WheatherAppIOS.app/WheatherAppIOS";
+			};
+			name = Debug;
+		};
+		FF417568270CA48F006FBA27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT46X4SNBR;
+				INFOPLIST_FILE = WheatherAppIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RustamKeneev.WheatherAppIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WheatherAppIOS.app/WheatherAppIOS";
+			};
+			name = Release;
+		};
+		FF41756A270CA48F006FBA27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT46X4SNBR;
+				INFOPLIST_FILE = WheatherAppIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RustamKeneev.WheatherAppIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WheatherAppIOS;
+			};
+			name = Debug;
+		};
+		FF41756B270CA48F006FBA27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HT46X4SNBR;
+				INFOPLIST_FILE = WheatherAppIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.RustamKeneev.WheatherAppIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WheatherAppIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF417531270CA48A006FBA27 /* Build configuration list for PBXProject "WheatherAppIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF417561270CA48F006FBA27 /* Debug */,
+				FF417562270CA48F006FBA27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF417563270CA48F006FBA27 /* Build configuration list for PBXNativeTarget "WheatherAppIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF417564270CA48F006FBA27 /* Debug */,
+				FF417565270CA48F006FBA27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF417566270CA48F006FBA27 /* Build configuration list for PBXNativeTarget "WheatherAppIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF417567270CA48F006FBA27 /* Debug */,
+				FF417568270CA48F006FBA27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF417569270CA48F006FBA27 /* Build configuration list for PBXNativeTarget "WheatherAppIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF41756A270CA48F006FBA27 /* Debug */,
+				FF41756B270CA48F006FBA27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FF417542270CA48A006FBA27 /* WheatherAppIOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FF417543270CA48A006FBA27 /* WheatherAppIOS.xcdatamodel */,
+			);
+			currentVersion = FF417543270CA48A006FBA27 /* WheatherAppIOS.xcdatamodel */;
+			path = WheatherAppIOS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FF41752E270CA48A006FBA27 /* Project object */;
+}
