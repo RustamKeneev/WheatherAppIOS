@@ -143,6 +143,7 @@
 		FF417538270CA48A006FBA27 /* WheatherAppIOS */ = {
 			isa = PBXGroup;
 			children = (
+				FF6A744C270DDDBF0073C25C /* Utils */,
 				FF6A7408270CAEE00073C25C /* Lottie */,
 				FF417539270CA48A006FBA27 /* AppDelegate.swift */,
 				FF41753B270CA48A006FBA27 /* SceneDelegate.swift */,
@@ -180,6 +181,13 @@
 				FF6A740B270CB7320073C25C /* weather.json */,
 			);
 			path = Lottie;
+			sourceTree = "<group>";
+		};
+		FF6A744C270DDDBF0073C25C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -8,8 +8,6 @@ import Lottie
 
 class ViewController: UIViewController {
     
-    let animationView = AnimationView()
-
     private lazy var cityLabel: UILabel = {
         let view = UILabel()
         view.text = "Бишкек"
@@ -102,18 +100,60 @@ class ViewController: UIViewController {
         return view
     }()
     
+    private lazy var animationView: AnimationView = {
+        let view = AnimationView()
+        view.animation = Animation.named("weather")
+        view.backgroundColor = .clear
+        view.backgroundColor = .clear
+        view.contentMode = .scaleAspectFit
+        view.loopMode = .loop
+        view.play()
+        return view
+    }()
     
-//    private lazy var animationView: AnimationView = {
-//        let view = AnimationView()
-//        view.backgroundColor = .clear
-//        return view
-//    }()
-
+    private lazy var roundTheClockUIView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.isOpaque = false
+        view.alpha = 0.1
+        view.layer.cornerRadius = 10
+        view.clipsToBounds = true
+        return view
+    }()
+       
+    private lazy var expectedWeatherLabel: UILabel = {
+        let view = UILabel()
+        view.text = "Ожидается дождливая погода около 18:00"
+        view.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        view.textColor = .white
+        return view
+    }()
+    
+    private lazy var separatorLine: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGray
+        return view
+    }()
+    
+    
+    
+    
+    
+    private lazy var tenDaysForecastUIView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.isOpaque = false
+        view.alpha = 0.1
+        view.layer.cornerRadius = 10
+        view.clipsToBounds = true
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .clear
         configure()
-        animation()
+//        animation()
     }
     
     func configure(){
@@ -127,9 +167,19 @@ class ViewController: UIViewController {
         view.addSubview(temperatureLabel)
         view.addSubview(weatherValueLabel)
         view.addSubview(temperatureValueUIView)
+        view.addSubview(roundTheClockUIView)
+        view.addSubview(expectedWeatherLabel)
+        view.addSubview(separatorLine)
+        view.addSubview(tenDaysForecastUIView)
     }
     
     func setupMakeContraints() {
+        animationView.snp.makeConstraints { make in
+            make.top.leading.equalToSuperview()
+//            make.width.equalToSuperview()
+//            make.height.equalTo(200)
+            make.size.equalTo(200)
+        }
         cityLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(30)
             make.leading.trailing.equalToSuperview()
@@ -152,18 +202,34 @@ class ViewController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(110)
             make.height.equalTo(30)
         }
+        
+        roundTheClockUIView.snp.makeConstraints { (make) in
+            make.top.equalTo(temperatureValueUIView.snp.bottom).offset(4)
+            make.leading.trailing.equalToSuperview().inset(8)
+            make.height.equalTo(200)
+        }
+        
+        tenDaysForecastUIView.snp.makeConstraints { (make) in
+            make.top.equalTo(roundTheClockUIView.snp.bottom).offset(16)
+            make.leading.trailing.equalToSuperview().inset(8)
+            make.height.equalTo(300)
+        }
+        
+        expectedWeatherLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(roundTheClockUIView.snp.top).offset(8)
+            make.leading.trailing.equalToSuperview().inset(16)
+        }
+        
+        separatorLine.snp.makeConstraints { (make) in
+            make.top.equalTo(expectedWeatherLabel.snp.bottom).offset(8)
+            make.leading.trailing.equalToSuperview().inset(8)
+            make.height.equalTo(1)
+        }
     }
 
     
     func animation()  {
-        animationView.animation = Animation.named("weather")
-        animationView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
-        animationView.center = view.center
-        animationView.backgroundColor = .clear
-        animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = .loop
-        animationView.play()
-//        view.addSubview(animationView)
+        
     }
 
 }
