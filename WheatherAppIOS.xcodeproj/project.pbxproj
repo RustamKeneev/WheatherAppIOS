@@ -18,6 +18,8 @@
 		FF417549270CA48E006FBA27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF417547270CA48E006FBA27 /* LaunchScreen.storyboard */; };
 		FF417554270CA48F006FBA27 /* WheatherAppIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF417553270CA48F006FBA27 /* WheatherAppIOSTests.swift */; };
 		FF41755F270CA48F006FBA27 /* WheatherAppIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41755E270CA48F006FBA27 /* WheatherAppIOSUITests.swift */; };
+		FF5D511F27123D52008984BB /* rain.gif in Resources */ = {isa = PBXBuildFile; fileRef = FF5D511E27123D52008984BB /* rain.gif */; };
+		FF5D51222712401E008984BB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5D51212712401E008984BB /* Extensions.swift */; };
 		FF6A744E270DDF9A0073C25C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A744D270DDF9A0073C25C /* Constants.swift */; };
 		FF6A7451270DE03B0073C25C /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A7450270DE03B0073C25C /* BaseViewModel.swift */; };
 		FF6A7457270DE0840073C25C /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A7456270DE0840073C25C /* ApiClient.swift */; };
@@ -80,6 +82,8 @@
 		FF41755A270CA48F006FBA27 /* WheatherAppIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheatherAppIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF41755E270CA48F006FBA27 /* WheatherAppIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheatherAppIOSUITests.swift; sourceTree = "<group>"; };
 		FF417560270CA48F006FBA27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF5D511E27123D52008984BB /* rain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rain.gif; sourceTree = "<group>"; };
+		FF5D51212712401E008984BB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FF6A744D270DDF9A0073C25C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FF6A7450270DE03B0073C25C /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		FF6A7456270DE0840073C25C /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 		FF417538270CA48A006FBA27 /* WheatherAppIOS */ = {
 			isa = PBXGroup;
 			children = (
+				FF5D512027124005008984BB /* Extensions */,
+				FF5D511D27123D2E008984BB /* GIF */,
 				FF6A7454270DE0700073C25C /* DataBase */,
 				FF6A7453270DE0640073C25C /* Api */,
 				FF6A7452270DE0590073C25C /* Repository */,
@@ -210,6 +216,22 @@
 				FF417560270CA48F006FBA27 /* Info.plist */,
 			);
 			path = WheatherAppIOSUITests;
+			sourceTree = "<group>";
+		};
+		FF5D511D27123D2E008984BB /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				FF5D511E27123D52008984BB /* rain.gif */,
+			);
+			path = GIF;
+			sourceTree = "<group>";
+		};
+		FF5D512027124005008984BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF5D51212712401E008984BB /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FF6A744C270DDDBF0073C25C /* Utils */ = {
@@ -423,6 +445,7 @@
 			files = (
 				FF417549270CA48E006FBA27 /* LaunchScreen.storyboard in Resources */,
 				FF417546270CA48E006FBA27 /* Assets.xcassets in Resources */,
+				FF5D511F27123D52008984BB /* rain.gif in Resources */,
 				FF417541270CA48A006FBA27 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF5D51222712401E008984BB /* Extensions.swift in Sources */,
 				FF6A7471270DF02E0073C25C /* AdministrativeAreaDataBaseModel.swift in Sources */,
 				FF6A74BC2711E5970073C25C /* SearchCityCell.swift in Sources */,
 				FF6A7457270DE0840073C25C /* ApiClient.swift in Sources */,
