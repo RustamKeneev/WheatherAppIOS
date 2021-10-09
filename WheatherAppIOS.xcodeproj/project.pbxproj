@@ -32,6 +32,11 @@
 		FF6A746C270DEFBA0073C25C /* SearchDataBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A746B270DEFBA0073C25C /* SearchDataBaseModel.swift */; };
 		FF6A746F270DF0060073C25C /* CountryDataBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A746E270DF0060073C25C /* CountryDataBaseModel.swift */; };
 		FF6A7471270DF02E0073C25C /* AdministrativeAreaDataBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A7470270DF02E0073C25C /* AdministrativeAreaDataBaseModel.swift */; };
+		FF6A74B42711D6CA0073C25C /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A74B32711D6CA0073C25C /* MainController.swift */; };
+		FF6A74B62711D6D60073C25C /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A74B52711D6D60073C25C /* SearchController.swift */; };
+		FF6A74B82711D87D0073C25C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A74B72711D87D0073C25C /* BaseViewController.swift */; };
+		FF6A74BA2711E20E0073C25C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A74B92711E20E0073C25C /* SearchViewModel.swift */; };
+		FF6A74BC2711E5970073C25C /* SearchCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A74BB2711E5970073C25C /* SearchCityCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +94,11 @@
 		FF6A746B270DEFBA0073C25C /* SearchDataBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataBaseModel.swift; sourceTree = "<group>"; };
 		FF6A746E270DF0060073C25C /* CountryDataBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDataBaseModel.swift; sourceTree = "<group>"; };
 		FF6A7470270DF02E0073C25C /* AdministrativeAreaDataBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdministrativeAreaDataBaseModel.swift; sourceTree = "<group>"; };
+		FF6A74B32711D6CA0073C25C /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		FF6A74B52711D6D60073C25C /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		FF6A74B72711D87D0073C25C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FF6A74B92711E20E0073C25C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		FF6A74BB2711E5970073C25C /* SearchCityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				FF6A7450270DE03B0073C25C /* BaseViewModel.swift */,
+				FF6A74B72711D87D0073C25C /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -248,6 +259,8 @@
 		FF6A745E270DE16E0073C25C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FF6A74B22711D6B20073C25C /* Search */,
+				FF6A74B12711D6A30073C25C /* Main */,
 				FF6A7461270DE19E0073C25C /* Splash */,
 			);
 			path = UI;
@@ -280,6 +293,24 @@
 				FF6A7470270DF02E0073C25C /* AdministrativeAreaDataBaseModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FF6A74B12711D6A30073C25C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FF6A74B32711D6CA0073C25C /* MainController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FF6A74B22711D6B20073C25C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				FF6A74B52711D6D60073C25C /* SearchController.swift */,
+				FF6A74B92711E20E0073C25C /* SearchViewModel.swift */,
+				FF6A74BB2711E5970073C25C /* SearchCityCell.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,9 +552,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF6A7471270DF02E0073C25C /* AdministrativeAreaDataBaseModel.swift in Sources */,
+				FF6A74BC2711E5970073C25C /* SearchCityCell.swift in Sources */,
 				FF6A7457270DE0840073C25C /* ApiClient.swift in Sources */,
+				FF6A74B62711D6D60073C25C /* SearchController.swift in Sources */,
 				FF6A744E270DDF9A0073C25C /* Constants.swift in Sources */,
 				FF6A745D270DE0B40073C25C /* DataBaseRepository.swift in Sources */,
+				FF6A74B82711D87D0073C25C /* BaseViewController.swift in Sources */,
+				FF6A74B42711D6CA0073C25C /* MainController.swift in Sources */,
 				FF6A7463270DE1B10073C25C /* SplashViewModel.swift in Sources */,
 				FF6A7451270DE03B0073C25C /* BaseViewModel.swift in Sources */,
 				FF6A746C270DEFBA0073C25C /* SearchDataBaseModel.swift in Sources */,
@@ -532,6 +567,7 @@
 				FF6A7460270DE1810073C25C /* SplashController.swift in Sources */,
 				FF6A746A270DE3520073C25C /* AdministrativeAreaResponseModel.swift in Sources */,
 				FF41753C270CA48A006FBA27 /* SceneDelegate.swift in Sources */,
+				FF6A74BA2711E20E0073C25C /* SearchViewModel.swift in Sources */,
 				FF6A7459270DE0900073C25C /* DataBase.swift in Sources */,
 				FF6A7466270DE21B0073C25C /* SearchResponseModel.swift in Sources */,
 				FF417544270CA48A006FBA27 /* WheatherAppIOS.xcdatamodeld in Sources */,

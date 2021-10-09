@@ -8,16 +8,23 @@
 import Foundation
 import UIKit
 
-class SplashController: UIViewController {
+class SplashController: BaseViewController {
     
     private lazy var viewModel: SplashViewModel = {
-        return SplashViewModel()
+        return SplashViewModel(delegate: self)
     }()
     
     override func viewDidLoad() {
-        viewModel.apiClient.getAutocompleteSearch(search: "bish") { model, message, error in
-            dump(model)
-        }
+        viewModel.checkSaveCity()
+    }
+}
+
+extension SplashController: SplashDelegate {
+    func showSearch() {
+        navigationController?.pushViewController(SearchController(), animated: true)
     }
     
+    func showMain() {
+        navigationController?.pushViewController(MainController(), animated: true)
+    }
 }

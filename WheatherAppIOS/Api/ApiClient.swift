@@ -30,16 +30,18 @@ class ApiClient {
         let request = URLRequest(url: components.url!)
                 
         URLSession.shared.dataTask(with: request) { data, response, error in
-            do {
-                if let data = data {
-                    let model = try JSONDecoder().decode(T.self, from: data)
-                
-                    completion(model, nil, nil)
-                } else {
-                    completion(nil, "Error data is nil", error)
+            DispatchQueue.main.async {
+                do {
+                    if let data = data {
+                        let model = try JSONDecoder().decode(T.self, from: data)
+                    
+                        completion(model, nil, nil)
+                    } else {
+                        completion(nil, "Error data is nil", error)
+                    }
+                } catch {
+                    completion(nil, "Error convert model", error)
                 }
-            } catch {
-                completion(nil, "Error convert model", error)
             }
         }.resume()
     }

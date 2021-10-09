@@ -18,11 +18,11 @@ class DataBaseRepository {
         return instanse
     }
     
-    func saveSearchModel(model: SearchDataBaseModel) {
+    func saveCity(model: SearchDataBaseModel) {
         dataBase.saveModel(model: model)
     }
     
-    func getSearchModel() -> Results<SearchDataBaseModel>? {
+    func getSaveCitys() -> Results<SearchDataBaseModel>? {
         return dataBase.getModel()
     }
 }
