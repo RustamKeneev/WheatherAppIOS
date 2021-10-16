@@ -134,6 +134,14 @@ class SearchController: BaseViewController {
 
 extension SearchController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = viewModel.saveCity?[indexPath.row]
+        
+        if let key = Int(model?.key ?? "0") {
+            navigationController?.pushViewController(MainController.newInstanse(cityKey: key), animated: true)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.saveCity?.count ?? 0
     }
