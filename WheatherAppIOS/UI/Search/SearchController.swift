@@ -136,9 +136,9 @@ extension SearchController: UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let model = viewModel.saveCity?[indexPath.row]
-        
-        if let key = Int(model?.key ?? "0") {
-            navigationController?.pushViewController(MainController.newInstanse(cityKey: key), animated: true)
+
+        if model?.key != nil && model?.localizedName != nil {
+            navigationController?.pushViewController(MainController.newInstanse(cityKey: Int(model!.key ?? "0")!, cityName: model!.localizedName ?? ""), animated: true)
         }
     }
     

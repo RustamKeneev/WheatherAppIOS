@@ -10,7 +10,7 @@ import Foundation
 class ApiClient {
     
     private let AUTOCOMPLETE_SEARCH = "http://dataservice.accuweather.com/locations/v1/cities/autocomplete"
-    private let DAYS_OF_DAILY_FORESTS = "http://dataservice.accuweather.com/forecasts/v1/daily/1day/"
+    private let DAYS_OF_DAILY_FORESTS = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/"
 
     func getAutocompleteSearch(search: String, completion: @escaping ([SearchResponseModel]?, String?, Error?) -> Void) {
         let params = [

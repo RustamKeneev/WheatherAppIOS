@@ -10,6 +10,10 @@
 		10DA0AB1538EBFF63CC5B962 /* Pods_WheatherAppIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A298663FAEB795D3D954CB2 /* Pods_WheatherAppIOSTests.framework */; };
 		95589630F1443A23997FC638 /* Pods_WheatherAppIOS_WheatherAppIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F3F621229DD2E861845425 /* Pods_WheatherAppIOS_WheatherAppIOSUITests.framework */; };
 		9FD442FF55912AA8FCF9D653 /* Pods_WheatherAppIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C4401D199E4D015B0732AB /* Pods_WheatherAppIOS.framework */; };
+		FF0011F5271DBA4400CF6D1F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0011F4271DBA4400CF6D1F /* MainViewModel.swift */; };
+		FF0011F8271DBB5500CF6D1F /* WeatherTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0011F7271DBB5500CF6D1F /* WeatherTitleCell.swift */; };
+		FF0011FA271DBFEC00CF6D1F /* WeatherDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0011F9271DBFEC00CF6D1F /* WeatherDayCell.swift */; };
+		FF0011FC271DC33B00CF6D1F /* WeatherInfoDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0011FB271DC33B00CF6D1F /* WeatherInfoDayCell.swift */; };
 		FF3CF0DC271B125D00D32A62 /* DaysOfDailyForecastsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3CF0DB271B125D00D32A62 /* DaysOfDailyForecastsResponseModel.swift */; };
 		FF41753A270CA48A006FBA27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF417539270CA48A006FBA27 /* AppDelegate.swift */; };
 		FF41753C270CA48A006FBA27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41753B270CA48A006FBA27 /* SceneDelegate.swift */; };
@@ -69,6 +73,10 @@
 		96F5986AA3B61CF627AF8E61 /* Pods-WheatherAppIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WheatherAppIOS.debug.xcconfig"; path = "Target Support Files/Pods-WheatherAppIOS/Pods-WheatherAppIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B0F3F621229DD2E861845425 /* Pods_WheatherAppIOS_WheatherAppIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WheatherAppIOS_WheatherAppIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C4401D199E4D015B0732AB /* Pods_WheatherAppIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WheatherAppIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0011F4271DBA4400CF6D1F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FF0011F7271DBB5500CF6D1F /* WeatherTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTitleCell.swift; sourceTree = "<group>"; };
+		FF0011F9271DBFEC00CF6D1F /* WeatherDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayCell.swift; sourceTree = "<group>"; };
+		FF0011FB271DC33B00CF6D1F /* WeatherInfoDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoDayCell.swift; sourceTree = "<group>"; };
 		FF3CF0DB271B125D00D32A62 /* DaysOfDailyForecastsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfDailyForecastsResponseModel.swift; sourceTree = "<group>"; };
 		FF417536270CA48A006FBA27 /* WheatherAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheatherAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF417539270CA48A006FBA27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +164,16 @@
 				0A298663FAEB795D3D954CB2 /* Pods_WheatherAppIOSTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF0011F6271DBB3400CF6D1F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FF0011F7271DBB5500CF6D1F /* WeatherTitleCell.swift */,
+				FF0011F9271DBFEC00CF6D1F /* WeatherDayCell.swift */,
+				FF0011FB271DC33B00CF6D1F /* WeatherInfoDayCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FF41752D270CA48A006FBA27 = {
@@ -323,7 +341,9 @@
 		FF6A74B12711D6A30073C25C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FF0011F6271DBB3400CF6D1F /* Cell */,
 				FF6A74B32711D6CA0073C25C /* MainController.swift */,
+				FF0011F4271DBA4400CF6D1F /* MainViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -582,7 +602,11 @@
 				FF6A74BC2711E5970073C25C /* SearchCityCell.swift in Sources */,
 				FF6A7457270DE0840073C25C /* ApiClient.swift in Sources */,
 				FF6A74B62711D6D60073C25C /* SearchController.swift in Sources */,
+				FF0011F5271DBA4400CF6D1F /* MainViewModel.swift in Sources */,
 				FF6A744E270DDF9A0073C25C /* Constants.swift in Sources */,
+				FF0011FA271DBFEC00CF6D1F /* WeatherDayCell.swift in Sources */,
+				FF0011F8271DBB5500CF6D1F /* WeatherTitleCell.swift in Sources */,
+				FF0011FC271DC33B00CF6D1F /* WeatherInfoDayCell.swift in Sources */,
 				FF6A745D270DE0B40073C25C /* DataBaseRepository.swift in Sources */,
 				FF6A74B82711D87D0073C25C /* BaseViewController.swift in Sources */,
 				FF6A74B42711D6CA0073C25C /* MainController.swift in Sources */,

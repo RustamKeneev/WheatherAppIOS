@@ -1,9 +1,10 @@
 
 import Foundation
 
+// MARK: - DaysOfDailyForecastsResponseModel
 class DaysOfDailyForecastsResponseModel: Codable {
-    let headline: Headline?
-    let dailyForecasts: [DailyForecast]?
+    var headline: Headline? = nil
+    var dailyForecasts: [DailyForecast]? = nil
 
     enum CodingKeys: String, CodingKey {
         case headline = "Headline"
@@ -16,22 +17,12 @@ class DaysOfDailyForecastsResponseModel: Codable {
     }
 }
 
-//
-// To read values from URLs:
-//
-//   let task = URLSession.shared.dailyForecastTask(with: url) { dailyForecast, response, error in
-//     if let dailyForecast = dailyForecast {
-//       ...
-//     }
-//   }
-//   task.resume()
-
 // MARK: - DailyForecast
 class DailyForecast: Codable {
-    let date: String?
-    let epochDate: Int?
-    let sun: Sun?
-    let moon: Moon?
+    var date: String? = nil
+    var epochDate: Int? = nil
+    var sun: Sun? = nil
+    var moon: Moon? = nil
     let temperature, realFeelTemperature, realFeelTemperatureShade: RealFeelTemperature?
     let hoursOfSun: Double?
     let degreeDaySummary: DegreeDaySummary?
@@ -309,7 +300,7 @@ class DegreeDaySummary: Codable {
 
 // MARK: - Moon
 class Moon: Codable {
-    let rise: Date?
+    let rise: String?
     let epochRise: Int?
     let moonSet: Date?
     let epochSet: Int?
@@ -325,7 +316,7 @@ class Moon: Codable {
         case age = "Age"
     }
 
-    init(rise: Date?, epochRise: Int?, moonSet: Date?, epochSet: Int?, phase: String?, age: Int?) {
+    init(rise: String?, epochRise: Int?, moonSet: Date?, epochSet: Int?, phase: String?, age: Int?) {
         self.rise = rise
         self.epochRise = epochRise
         self.moonSet = moonSet
@@ -372,7 +363,7 @@ class RealFeelTemperature: Codable {
 
 // MARK: - Sun
 class Sun: Codable {
-    let rise: Date?
+    let rise: String?
     let epochRise: Int?
     let sunSet: Date?
     let epochSet: Int?
@@ -384,7 +375,7 @@ class Sun: Codable {
         case epochSet = "EpochSet"
     }
 
-    init(rise: Date?, epochRise: Int?, sunSet: Date?, epochSet: Int?) {
+    init(rise: String?, epochRise: Int?, sunSet: Date?, epochSet: Int?) {
         self.rise = rise
         self.epochRise = epochRise
         self.sunSet = sunSet
@@ -407,7 +398,6 @@ class Headline: Codable {
     let effectiveDate: String?
     let effectiveEpochDate, severity: Int?
     let text, category: String?
-    let endDate, endEpochDate: JSONNull?
     let mobileLink, link: String?
 
     enum CodingKeys: String, CodingKey {
@@ -416,69 +406,17 @@ class Headline: Codable {
         case severity = "Severity"
         case text = "Text"
         case category = "Category"
-        case endDate = "EndDate"
-        case endEpochDate = "EndEpochDate"
         case mobileLink = "MobileLink"
         case link = "Link"
     }
 
-    init(effectiveDate: String?, effectiveEpochDate: Int?, severity: Int?, text: String?, category: String?, endDate: JSONNull?, endEpochDate: JSONNull?, mobileLink: String?, link: String?) {
+    init(effectiveDate: String?, effectiveEpochDate: Int?, severity: Int?, text: String?, category: String?, mobileLink: String?, link: String?) {
         self.effectiveDate = effectiveDate
         self.effectiveEpochDate = effectiveEpochDate
         self.severity = severity
         self.text = text
         self.category = category
-        self.endDate = endDate
-        self.endEpochDate = endEpochDate
         self.mobileLink = mobileLink
         self.link = link
-    }
-}
-
-// MARK: - Helper functions for creating encoders and decoders
-
-func newJSONDecoder() -> JSONDecoder {
-    let decoder = JSONDecoder()
-    if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
-        decoder.dateDecodingStrategy = .iso8601
-    }
-    return decoder
-}
-
-func newJSONEncoder() -> JSONEncoder {
-    let encoder = JSONEncoder()
-    if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
-        encoder.dateEncodingStrategy = .iso8601
-    }
-    return encoder
-}
-
-// MARK: - URLSession response handlers
-
-
-// MARK: - Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
     }
 }
