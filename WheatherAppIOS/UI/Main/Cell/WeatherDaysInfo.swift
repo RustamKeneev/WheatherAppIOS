@@ -1,15 +1,15 @@
 //
-//  WeatherDayCell.swift
+//  WeatherDaysInfo.swift
 //  WheatherAppIOS
 //
-//  Created by Rustam Keneev on 18/10/21.
+//  Created by Rustam Keneev on 21/10/21.
 //
 
 import Foundation
 import UIKit
 import SnapKit
 
-class WeatherDayCell: UICollectionViewCell {
+class WeatherDaysInfo: UICollectionViewCell {
     
     private lazy var viewContatints: UIView = {
         let view = UIView()
@@ -22,7 +22,7 @@ class WeatherDayCell: UICollectionViewCell {
     private lazy var titleDay: UILabel = {
         let view = UILabel()
         view.textColor = .white
-        view.text = "Ожидаеться переменая обочность около 18:00"
+        view.text = "Прогноз погоды на 5 дней"
         view.numberOfLines = 0
         view.font = UIFont.systemFont(ofSize: 14)
         return view
@@ -34,14 +34,14 @@ class WeatherDayCell: UICollectionViewCell {
         return view
     }()
     
-    private lazy var dayInfoCollectionView : UICollectionView = {
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .horizontal
-        
-        let view = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+    private lazy var daysInfoCollectionView: UITableView = {
+        let view = UITableView()
+        view.backgroundColor = .clear
+        view.isScrollEnabled = false
         view.delegate = self
         view.dataSource = self
-        view.register(WeatherInfoDayCell.self, forCellWithReuseIdentifier: "WeatherInfoDayCell")
+        
+        view.register(WeatherDaysInfoSupportCell.self, forCellReuseIdentifier: "WeatherDaysInfoSupportCell")
         return view
     }()
     
@@ -69,26 +69,27 @@ class WeatherDayCell: UICollectionViewCell {
             make.height.equalTo(1)
         }
                 
-        viewContatints.addSubview(dayInfoCollectionView)
-        dayInfoCollectionView.snp.makeConstraints { (make) in
+        viewContatints.addSubview(daysInfoCollectionView)
+        daysInfoCollectionView.snp.makeConstraints { (make) in
             make.left.right.bottom.equalToSuperview()
             make.top.equalTo(viewSeparator.snp.bottom)
         }
         
-        dayInfoCollectionView.reloadData()
+        daysInfoCollectionView.reloadData()
     }
 }
 
-extension WeatherDayCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 80, height: 100)
+extension WeatherDaysInfo: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherInfoDayCell", for: indexPath) as! WeatherInfoDayCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherDaysInfoSupportCell", for: indexPath) as! WeatherDaysInfoSupportCell
+        return cell
     }
 }

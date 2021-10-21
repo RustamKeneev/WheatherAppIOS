@@ -25,6 +25,8 @@ class MainViewModel: BaseViewModel {
         apiClient.getDaysOfDailyForecasts(cityKey: cityKey) { [self] model, message, error in
             if let model = model {
                 wearherModel = model
+                
+                delegate?.showWeather()
             }
         }
     }

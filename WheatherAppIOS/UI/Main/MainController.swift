@@ -34,6 +34,15 @@ class MainController: BaseViewController {
         view.dataSource = self
         view.register(WeatherTitleCell.self, forCellWithReuseIdentifier: "WeatherTitleCell")
         view.register(WeatherDayCell.self, forCellWithReuseIdentifier: "WeatherDayCell")
+        view.register(WeatherDaysInfo.self, forCellWithReuseIdentifier: "WeatherDaysInfo")
+        view.register(WeatherSupportCell.self, forCellWithReuseIdentifier: "WeatherSupportCell")
+        view.register(WeatherMapCell.self, forCellWithReuseIdentifier: "WeatherMapCell")
+        return view
+    }()
+    
+    private lazy var viewSeparator: UIView = {
+        let view = UIView()
+        view.backgroundColor = .gray
         return view
     }()
     
@@ -44,6 +53,19 @@ class MainController: BaseViewController {
         view.textColor = .white
         return view
     }()
+    
+    private lazy var backButton: UIButton = {
+        let view = UIButton()
+        view.setTitle("Back", for: .normal)
+        view.titleLabel?.textColor = .white
+        view.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        view.addTarget(self, action: #selector(clickBack(view:)), for: .touchUpInside)
+        return view
+    }()
+    
+    @objc func clickBack(view: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     
     override func viewDidLoad() {
         view.backgroundColor = .black
@@ -56,33 +78,60 @@ class MainController: BaseViewController {
             make.top.equalToSuperview().offset(16)
         }
         
+        view.addSubview(viewSeparator)
+        viewSeparator.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-40)
+            make.height.equalTo(1)
+        }
+        
+        view.addSubview(backButton)
+        backButton.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().offset(-16)
+            make.top.equalTo(viewSeparator.snp.bottom)
+            make.bottom.equalToSuperview()
+        }
+        
         view.addSubview(infoCollectionView)
         infoCollectionView.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview()
+            make.right.equalToSuperview().offset(-8)
+            make.left.equalToSuperview().offset(8)
             make.top.equalTo(cityTitle.snp.bottom)
-            make.bottom.equalToSuperview()
+            make.bottom.equalTo(viewSeparator.snp.top)
         }
     }
 }
 
 extension MainController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.row == 0 {
             return CGSize(width: self.view.frame.width, height: 116) // WeatherTitleCell
-        } else {
+        } else if indexPath.row == 1 {
             return CGSize(width: self.view.frame.width, height: 160) // WeatherDayCell
+        } else if indexPath.row == 2 {
+            return CGSize(width: self.view.frame.width, height: 290) // WeatherDaysInfo
+        } else if (3...8).contains(indexPath.row) {
+            return CGSize(width: (self.view.frame.width / 2) - 13, height: (self.view.frame.width / 2) - 13) // WeatherSupportCell
+        } else {
+            return CGSize(width: self.view.frame.width, height: 200) // WeatherMapCell
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
             return collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherTitleCell", for: indexPath) as! WeatherTitleCell
-        } else {
+        } else if indexPath.row == 1 {
             return collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherDayCell", for: indexPath) as! WeatherDayCell
+        } else if indexPath.row == 2 {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherDaysInfo", for: indexPath) as! WeatherDaysInfo
+        } else if (3...8).contains(indexPath.row) {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherSupportCell", for: indexPath) as! WeatherSupportCell
+        } else {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherMapCell", for: indexPath) as! WeatherMapCell
         }
     }
 }

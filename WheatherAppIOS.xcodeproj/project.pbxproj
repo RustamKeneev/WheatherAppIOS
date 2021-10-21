@@ -14,6 +14,10 @@
 		FF0011F8271DBB5500CF6D1F /* WeatherTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0011F7271DBB5500CF6D1F /* WeatherTitleCell.swift */; };
 		FF0011FA271DBFEC00CF6D1F /* WeatherDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0011F9271DBFEC00CF6D1F /* WeatherDayCell.swift */; };
 		FF0011FC271DC33B00CF6D1F /* WeatherInfoDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0011FB271DC33B00CF6D1F /* WeatherInfoDayCell.swift */; };
+		FF0011FE2721A7F100CF6D1F /* WeatherDaysInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0011FD2721A7F100CF6D1F /* WeatherDaysInfo.swift */; };
+		FF0012002721A9F800CF6D1F /* WeatherDaysInfoSupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0011FF2721A9F800CF6D1F /* WeatherDaysInfoSupportCell.swift */; };
+		FF0012022721AC3D00CF6D1F /* WeatherSupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0012012721AC3D00CF6D1F /* WeatherSupportCell.swift */; };
+		FF0012042721B18D00CF6D1F /* WeatherMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0012032721B18D00CF6D1F /* WeatherMapCell.swift */; };
 		FF3CF0DC271B125D00D32A62 /* DaysOfDailyForecastsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3CF0DB271B125D00D32A62 /* DaysOfDailyForecastsResponseModel.swift */; };
 		FF41753A270CA48A006FBA27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF417539270CA48A006FBA27 /* AppDelegate.swift */; };
 		FF41753C270CA48A006FBA27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41753B270CA48A006FBA27 /* SceneDelegate.swift */; };
@@ -77,6 +81,10 @@
 		FF0011F7271DBB5500CF6D1F /* WeatherTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTitleCell.swift; sourceTree = "<group>"; };
 		FF0011F9271DBFEC00CF6D1F /* WeatherDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDayCell.swift; sourceTree = "<group>"; };
 		FF0011FB271DC33B00CF6D1F /* WeatherInfoDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoDayCell.swift; sourceTree = "<group>"; };
+		FF0011FD2721A7F100CF6D1F /* WeatherDaysInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDaysInfo.swift; sourceTree = "<group>"; };
+		FF0011FF2721A9F800CF6D1F /* WeatherDaysInfoSupportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDaysInfoSupportCell.swift; sourceTree = "<group>"; };
+		FF0012012721AC3D00CF6D1F /* WeatherSupportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSupportCell.swift; sourceTree = "<group>"; };
+		FF0012032721B18D00CF6D1F /* WeatherMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMapCell.swift; sourceTree = "<group>"; };
 		FF3CF0DB271B125D00D32A62 /* DaysOfDailyForecastsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfDailyForecastsResponseModel.swift; sourceTree = "<group>"; };
 		FF417536270CA48A006FBA27 /* WheatherAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheatherAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF417539270CA48A006FBA27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +180,10 @@
 				FF0011F7271DBB5500CF6D1F /* WeatherTitleCell.swift */,
 				FF0011F9271DBFEC00CF6D1F /* WeatherDayCell.swift */,
 				FF0011FB271DC33B00CF6D1F /* WeatherInfoDayCell.swift */,
+				FF0011FD2721A7F100CF6D1F /* WeatherDaysInfo.swift */,
+				FF0011FF2721A9F800CF6D1F /* WeatherDaysInfoSupportCell.swift */,
+				FF0012012721AC3D00CF6D1F /* WeatherSupportCell.swift */,
+				FF0012032721B18D00CF6D1F /* WeatherMapCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -370,6 +382,7 @@
 				FF417533270CA48A006FBA27 /* Frameworks */,
 				FF417534270CA48A006FBA27 /* Resources */,
 				BEBE83E9D1EAAF612EAB302D /* [CP] Embed Pods Frameworks */,
+				C40663C8AFB5649BC1B5FE07 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -408,6 +421,7 @@
 				FF417557270CA48F006FBA27 /* Frameworks */,
 				FF417558270CA48F006FBA27 /* Resources */,
 				797C2779407DDF2F1BE97B04 /* [CP] Embed Pods Frameworks */,
+				D56A7913CF3E69F9AB1E997B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -590,6 +604,40 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WheatherAppIOS/Pods-WheatherAppIOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C40663C8AFB5649BC1B5FE07 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WheatherAppIOS/Pods-WheatherAppIOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WheatherAppIOS/Pods-WheatherAppIOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WheatherAppIOS/Pods-WheatherAppIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D56A7913CF3E69F9AB1E997B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WheatherAppIOS-WheatherAppIOSUITests/Pods-WheatherAppIOS-WheatherAppIOSUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WheatherAppIOS-WheatherAppIOSUITests/Pods-WheatherAppIOS-WheatherAppIOSUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WheatherAppIOS-WheatherAppIOSUITests/Pods-WheatherAppIOS-WheatherAppIOSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -597,12 +645,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF0012002721A9F800CF6D1F /* WeatherDaysInfoSupportCell.swift in Sources */,
 				FF5D51222712401E008984BB /* Extensions.swift in Sources */,
 				FF6A7471270DF02E0073C25C /* AdministrativeAreaDataBaseModel.swift in Sources */,
 				FF6A74BC2711E5970073C25C /* SearchCityCell.swift in Sources */,
 				FF6A7457270DE0840073C25C /* ApiClient.swift in Sources */,
 				FF6A74B62711D6D60073C25C /* SearchController.swift in Sources */,
 				FF0011F5271DBA4400CF6D1F /* MainViewModel.swift in Sources */,
+				FF0012022721AC3D00CF6D1F /* WeatherSupportCell.swift in Sources */,
 				FF6A744E270DDF9A0073C25C /* Constants.swift in Sources */,
 				FF0011FA271DBFEC00CF6D1F /* WeatherDayCell.swift in Sources */,
 				FF0011F8271DBB5500CF6D1F /* WeatherTitleCell.swift in Sources */,
@@ -610,6 +660,7 @@
 				FF6A745D270DE0B40073C25C /* DataBaseRepository.swift in Sources */,
 				FF6A74B82711D87D0073C25C /* BaseViewController.swift in Sources */,
 				FF6A74B42711D6CA0073C25C /* MainController.swift in Sources */,
+				FF0011FE2721A7F100CF6D1F /* WeatherDaysInfo.swift in Sources */,
 				FF6A7463270DE1B10073C25C /* SplashViewModel.swift in Sources */,
 				FF6A7451270DE03B0073C25C /* BaseViewModel.swift in Sources */,
 				FF6A746C270DEFBA0073C25C /* SearchDataBaseModel.swift in Sources */,
@@ -623,6 +674,7 @@
 				FF6A7466270DE21B0073C25C /* SearchResponseModel.swift in Sources */,
 				FF417544270CA48A006FBA27 /* WheatherAppIOS.xcdatamodeld in Sources */,
 				FF3CF0DC271B125D00D32A62 /* DaysOfDailyForecastsResponseModel.swift in Sources */,
+				FF0012042721B18D00CF6D1F /* WeatherMapCell.swift in Sources */,
 				FF6A745B270DE0A60073C25C /* ApiRepository.swift in Sources */,
 				FF6A746F270DF0060073C25C /* CountryDataBaseModel.swift in Sources */,
 			);
