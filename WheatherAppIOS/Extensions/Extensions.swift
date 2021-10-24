@@ -246,3 +246,16 @@ extension UIImage {
     }
 
 }
+
+extension String {
+    func getFormattedDate() -> String{
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+        
+        let date: Date? = dateFormatterGet.date(from: self)
+        return dateFormatterPrint.string(from: date!);
+    }
+}

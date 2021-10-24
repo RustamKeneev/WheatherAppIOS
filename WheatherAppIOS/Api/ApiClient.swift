@@ -11,7 +11,20 @@ class ApiClient {
     
     private let AUTOCOMPLETE_SEARCH = "http://dataservice.accuweather.com/locations/v1/cities/autocomplete"
     private let DAYS_OF_DAILY_FORESTS = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/"
+    private let GET_GEO_POINT_CITY_KEY = "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search"
 
+    func getGeoSearch(lat: Double, lon: Double, completion: @escaping (SearchResponseModel?, String?, Error?) -> Void) {
+        let params = [
+            "apikey" : Constants.API_KEY,
+            "q" : "\(lat), \(lon)",
+            "language" : Constants.LANGUAGE_EN,
+            "details" : "false",
+            "toplevel" : "false"
+        ]
+        
+        sendGetRequest(url: GET_GEO_POINT_CITY_KEY, parameters: params, completion: completion)
+    }
+    
     func getAutocompleteSearch(search: String, completion: @escaping ([SearchResponseModel]?, String?, Error?) -> Void) {
         let params = [
             "apikey" : Constants.API_KEY,

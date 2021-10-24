@@ -34,8 +34,8 @@ class WeatherMapCell: UICollectionViewCell {
     override func layoutSubviews() {
         addSubview(viewContatints)
         viewContatints.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(8)
-            make.right.equalToSuperview().offset(-16)
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
             make.bottom.equalToSuperview().offset(-4)
             make.top.equalToSuperview().offset(4)
         }

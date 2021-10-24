@@ -26,6 +26,8 @@ class SearchViewModel: BaseViewModel {
     
     func saveCityModel(model: SearchDataBaseModel) {
         dataBase.saveCity(model: model)
+        
+        delegate?.showSaveSearch()
     }
     
     func showSaveCityModel() {

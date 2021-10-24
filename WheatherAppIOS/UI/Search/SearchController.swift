@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SnapKit
+import CoreLocation
 
 class SearchController: BaseViewController {
     
@@ -69,7 +70,20 @@ class SearchController: BaseViewController {
         return view
     }()
     
+    private lazy var openMap: UIButton = {
+        let view = UIButton()
+        view.setTitle("Открыть карту", for: .normal)
+        view.setTitleColor(.white, for: .normal)
+        view.titleLabel?.font = UIFont.systemFont(ofSize: 18)
+        view.addTarget(self, action: #selector(openMapClick), for: .touchUpInside)
+        return view
+    }()
+    
     private var models: [SearchResponseModel] = []
+    
+    @objc func openMapClick(view: UIButton) {
+        navigationController?.pushViewController(MapController(), animated: true)
+    }
     
     @objc func canselButtonClick(view: UIButton) {
         closeSearch()
@@ -128,6 +142,21 @@ class SearchController: BaseViewController {
             make.top.equalTo(searchTextField.snp.bottom).offset(16)
         }
         
+        view.addSubview(openMap)
+        openMap.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview().offset(-16)
+            make.right.equalToSuperview().offset(-16)
+        }
+        
+        viewModel.showSaveCityModel()
+        
+        let locationManager = CLLocationManager()
+
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         viewModel.showSaveCityModel()
     }
 }

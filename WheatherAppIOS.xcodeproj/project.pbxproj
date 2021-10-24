@@ -18,6 +18,8 @@
 		FF0012002721A9F800CF6D1F /* WeatherDaysInfoSupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0011FF2721A9F800CF6D1F /* WeatherDaysInfoSupportCell.swift */; };
 		FF0012022721AC3D00CF6D1F /* WeatherSupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0012012721AC3D00CF6D1F /* WeatherSupportCell.swift */; };
 		FF0012042721B18D00CF6D1F /* WeatherMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0012032721B18D00CF6D1F /* WeatherMapCell.swift */; };
+		FF0012072725AFD400CF6D1F /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0012062725AFD400CF6D1F /* MapController.swift */; };
+		FF0012092725B31500CF6D1F /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0012082725B31500CF6D1F /* MapViewModel.swift */; };
 		FF3CF0DC271B125D00D32A62 /* DaysOfDailyForecastsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3CF0DB271B125D00D32A62 /* DaysOfDailyForecastsResponseModel.swift */; };
 		FF41753A270CA48A006FBA27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF417539270CA48A006FBA27 /* AppDelegate.swift */; };
 		FF41753C270CA48A006FBA27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF41753B270CA48A006FBA27 /* SceneDelegate.swift */; };
@@ -85,6 +87,8 @@
 		FF0011FF2721A9F800CF6D1F /* WeatherDaysInfoSupportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDaysInfoSupportCell.swift; sourceTree = "<group>"; };
 		FF0012012721AC3D00CF6D1F /* WeatherSupportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSupportCell.swift; sourceTree = "<group>"; };
 		FF0012032721B18D00CF6D1F /* WeatherMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMapCell.swift; sourceTree = "<group>"; };
+		FF0012062725AFD400CF6D1F /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		FF0012082725B31500CF6D1F /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		FF3CF0DB271B125D00D32A62 /* DaysOfDailyForecastsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfDailyForecastsResponseModel.swift; sourceTree = "<group>"; };
 		FF417536270CA48A006FBA27 /* WheatherAppIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheatherAppIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF417539270CA48A006FBA27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +190,15 @@
 				FF0012032721B18D00CF6D1F /* WeatherMapCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FF0012052725AFB200CF6D1F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				FF0012062725AFD400CF6D1F /* MapController.swift */,
+				FF0012082725B31500CF6D1F /* MapViewModel.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		FF41752D270CA48A006FBA27 = {
@@ -313,6 +326,7 @@
 		FF6A745E270DE16E0073C25C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FF0012052725AFB200CF6D1F /* Map */,
 				FF6A74B22711D6B20073C25C /* Search */,
 				FF6A74B12711D6A30073C25C /* Main */,
 				FF6A7461270DE19E0073C25C /* Splash */,
@@ -658,6 +672,7 @@
 				FF0011F8271DBB5500CF6D1F /* WeatherTitleCell.swift in Sources */,
 				FF0011FC271DC33B00CF6D1F /* WeatherInfoDayCell.swift in Sources */,
 				FF6A745D270DE0B40073C25C /* DataBaseRepository.swift in Sources */,
+				FF0012092725B31500CF6D1F /* MapViewModel.swift in Sources */,
 				FF6A74B82711D87D0073C25C /* BaseViewController.swift in Sources */,
 				FF6A74B42711D6CA0073C25C /* MainController.swift in Sources */,
 				FF0011FE2721A7F100CF6D1F /* WeatherDaysInfo.swift in Sources */,
@@ -670,6 +685,7 @@
 				FF6A746A270DE3520073C25C /* AdministrativeAreaResponseModel.swift in Sources */,
 				FF41753C270CA48A006FBA27 /* SceneDelegate.swift in Sources */,
 				FF6A74BA2711E20E0073C25C /* SearchViewModel.swift in Sources */,
+				FF0012072725AFD400CF6D1F /* MapController.swift in Sources */,
 				FF6A7459270DE0900073C25C /* DataBase.swift in Sources */,
 				FF6A7466270DE21B0073C25C /* SearchResponseModel.swift in Sources */,
 				FF417544270CA48A006FBA27 /* WheatherAppIOS.xcdatamodeld in Sources */,

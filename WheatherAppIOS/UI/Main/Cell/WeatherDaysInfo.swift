@@ -48,8 +48,8 @@ class WeatherDaysInfo: UICollectionViewCell {
     override func layoutSubviews() {
         addSubview(viewContatints)
         viewContatints.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(8)
-            make.right.equalToSuperview().offset(-16)
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
             make.bottom.equalToSuperview().offset(-4)
             make.top.equalToSuperview().offset(4)
         }
@@ -77,11 +77,19 @@ class WeatherDaysInfo: UICollectionViewCell {
         
         daysInfoCollectionView.reloadData()
     }
+    
+    private var model: DaysOfDailyForecastsResponseModel? = nil
+    
+    func fill(model: DaysOfDailyForecastsResponseModel?) {
+        self.model = model
+        
+        daysInfoCollectionView.reloadData()
+    }
 }
 
 extension WeatherDaysInfo: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return model?.dailyForecasts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -90,6 +98,10 @@ extension WeatherDaysInfo: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherDaysInfoSupportCell", for: indexPath) as! WeatherDaysInfoSupportCell
+        let model = model?.dailyForecasts?[indexPath.row]
+    
+        cell.fill(day: model, days: indexPath.row)
+        
         return cell
     }
 }

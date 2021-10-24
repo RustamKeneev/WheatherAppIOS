@@ -21,6 +21,10 @@ class ApiRepository {
         api.getAutocompleteSearch(search: search, completion: completion)
     }
     
+    func getGeoSearch(lat: Double, lon: Double, completion: @escaping (SearchResponseModel?, String?, Error?) -> Void) {
+        api.getGeoSearch(lat: lat, lon: lon, completion: completion)
+    }
+    
     func getDaysOfDailyForecasts(cityKey: Int, completion: @escaping (DaysOfDailyForecastsResponseModel?, String?, Error?) -> Void) {
         api.getDaysofDailyForecasts(cityKey: cityKey, completion: completion)
     }

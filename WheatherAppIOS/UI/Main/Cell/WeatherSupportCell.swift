@@ -48,10 +48,9 @@ class WeatherSupportCell: UICollectionViewCell {
     override func layoutSubviews() {
         addSubview(viewContatints)
         viewContatints.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(8)
-            make.right.equalToSuperview().offset(-8)
-            make.bottom.equalToSuperview().offset(-4)
-            make.top.equalToSuperview().offset(4)
+            make.right.left.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.top.equalToSuperview()
         }
         
         viewContatints.addSubview(supportTitleInfo)

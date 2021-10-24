@@ -10,6 +10,7 @@ target 'WheatherAppIOS' do
   pod 'RealmSwift'
   pod 'lottie-ios'
   pod 'GoogleMaps'
+  pod 'Kingfisher'
   
   target 'WheatherAppIOSTests' do
     inherit! :search_paths

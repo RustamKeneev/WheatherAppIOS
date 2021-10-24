@@ -58,7 +58,7 @@ class MainController: BaseViewController {
         let view = UIButton()
         view.setTitle("Back", for: .normal)
         view.titleLabel?.textColor = .white
-        view.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        view.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         view.addTarget(self, action: #selector(clickBack(view:)), for: .touchUpInside)
         return view
     }()
@@ -94,11 +94,13 @@ class MainController: BaseViewController {
         
         view.addSubview(infoCollectionView)
         infoCollectionView.snp.makeConstraints { (make) in
-            make.right.equalToSuperview().offset(-8)
-            make.left.equalToSuperview().offset(8)
+            make.right.equalToSuperview().offset(-16)
+            make.left.equalToSuperview().offset(16)
             make.top.equalTo(cityTitle.snp.bottom)
             make.bottom.equalTo(viewSeparator.snp.top)
         }
+        
+        viewModel.getWeather(cityKey: cityKey ?? 0)
     }
 }
 
@@ -109,25 +111,31 @@ extension MainController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.row == 0 {
-            return CGSize(width: self.view.frame.width, height: 116) // WeatherTitleCell
+            return CGSize(width: self.view.frame.width - 32, height: 116) // WeatherTitleCell
         } else if indexPath.row == 1 {
-            return CGSize(width: self.view.frame.width, height: 160) // WeatherDayCell
+            return CGSize(width: self.view.frame.width - 32, height: 220) // WeatherDayCell
         } else if indexPath.row == 2 {
-            return CGSize(width: self.view.frame.width, height: 290) // WeatherDaysInfo
+            return CGSize(width: self.view.frame.width - 32, height: 290) // WeatherDaysInfo
         } else if (3...8).contains(indexPath.row) {
-            return CGSize(width: (self.view.frame.width / 2) - 13, height: (self.view.frame.width / 2) - 13) // WeatherSupportCell
+            return CGSize(width: (self.view.frame.width / 2) - 30, height: (self.view.frame.width / 2) - 30) // WeatherSupportCell
         } else {
-            return CGSize(width: self.view.frame.width, height: 200) // WeatherMapCell
+            return CGSize(width: self.view.frame.width - 32, height: 200) // WeatherMapCell
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherTitleCell", for: indexPath) as! WeatherTitleCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherTitleCell", for: indexPath) as! WeatherTitleCell
+            cell.fill(model: viewModel.wearherModel)
+            return cell
         } else if indexPath.row == 1 {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherDayCell", for: indexPath) as! WeatherDayCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherDayCell", for: indexPath) as! WeatherDayCell
+            cell.fill(model: viewModel.wearherModel)
+            return cell
         } else if indexPath.row == 2 {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherDaysInfo", for: indexPath) as! WeatherDaysInfo
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherDaysInfo", for: indexPath) as! WeatherDaysInfo
+            cell.fill(model: viewModel.wearherModel)
+            return cell
         } else if (3...8).contains(indexPath.row) {
             return collectionView.dequeueReusableCell(withReuseIdentifier: "WeatherSupportCell", for: indexPath) as! WeatherSupportCell
         } else {
@@ -138,6 +146,6 @@ extension MainController: UICollectionViewDelegate, UICollectionViewDataSource, 
 
 extension MainController: MainDelegate {
     func showWeather() {
-        
+        self.infoCollectionView.reloadData()
     }
 }

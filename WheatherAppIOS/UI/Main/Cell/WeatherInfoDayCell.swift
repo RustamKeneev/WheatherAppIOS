@@ -17,7 +17,7 @@ class WeatherInfoDayCell: UICollectionViewCell {
         view.text = "14"
         view.numberOfLines = 0
         view.textAlignment = .center
-        view.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        view.font = UIFont.systemFont(ofSize: 12, weight: .bold)
         return view
     }()
     
@@ -45,5 +45,15 @@ class WeatherInfoDayCell: UICollectionViewCell {
             make.right.equalToSuperview()
             make.bottom.equalToSuperview().offset(-8)
         }
+    }
+    
+    func fill(day: DailyForecast?, days: Int) {
+        if days == 0 {
+            dateDay.text = "Сегодня\nДнем \(day?.day?.iconPhrase ?? "")\nНочью \(day?.night?.iconPhrase ?? "")"
+        } else {
+            dateDay.text = "\(day?.date?.getFormattedDate() ?? "")\nДнем \(day?.day?.iconPhrase ?? "")\nНочью \(day?.night?.iconPhrase ?? "")"
+        }
+        
+        tempiratureDay.text = "\(((day?.temperature?.maximum?.value ?? 0.0) + (day?.temperature?.minimum?.value ?? 0.0)) / 2.0)°C"
     }
 }

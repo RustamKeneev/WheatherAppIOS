@@ -14,7 +14,7 @@ class WeatherTitleCell: UICollectionViewCell {
     private lazy var cityTitle: UILabel = {
         let view = UILabel()
         view.textColor = .white
-        view.text = "12°"
+        view.textAlignment = .center
         view.font = UIFont.systemFont(ofSize: 40)
         return view
     }()
@@ -32,14 +32,21 @@ class WeatherTitleCell: UICollectionViewCell {
     override func layoutSubviews() {
         addSubview(cityTitle)
         cityTitle.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
             make.top.equalToSuperview().offset(10)
         }
         
         addSubview(weatherInfo)
         weatherInfo.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
             make.top.equalTo(cityTitle.snp.bottom).offset(8)
         }
+    }
+    
+    public func fill(model: DaysOfDailyForecastsResponseModel?) {
+        cityTitle.text = "\(((model?.dailyForecasts?[0].temperature?.maximum?.value ?? 0.0) + (model?.dailyForecasts?[0].temperature?.minimum?.value ?? 0.0)) / 2.0)°C"
+        weatherInfo.text = "\(model?.headline?.text ?? "")\nмакс.:\(model?.dailyForecasts?[0].temperature?.maximum?.value ?? 0.0)°, мин.:\(model?.dailyForecasts?[0].temperature?.minimum?.value ?? 0.0)°,"
     }
 }
