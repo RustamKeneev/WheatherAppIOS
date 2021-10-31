@@ -21,7 +21,6 @@ class MapViewModel: BaseViewModel {
     
     func getGeoData(lat: Double, lon: Double) {
         apiClient.getGeoSearch(lat: lat, lon: lon) { model, message, error in
-            print(message)
             
             if let model = model {
                 DispatchQueue.main.async {
